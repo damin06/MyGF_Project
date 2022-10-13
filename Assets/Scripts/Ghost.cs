@@ -6,7 +6,7 @@ public class Ghost : MonoBehaviour
     public Tile tile;
     public Board mainBoard;
     public Piece trackingPiece;
-    public ScoreManager scoreManager;
+    private ScoreManager scoreManager;
 
     public Tilemap tilemap { get; private set; }
     public Vector3Int[] cells { get; private set; }

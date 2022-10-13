@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+
 public class Board : MonoBehaviour
 {
     private animationManager animationManager;
@@ -12,6 +13,7 @@ public class Board : MonoBehaviour
     public Vector2Int boardSize = new Vector2Int(10, 20);
     public Vector3Int spawnPosition = new Vector3Int(-1, 8, 0);
 
+
     public RectInt Bounds {
         get
         {
@@ -19,6 +21,8 @@ public class Board : MonoBehaviour
             return new RectInt(position, boardSize);
         }
     }
+
+
 
     private void Awake()
     {
@@ -53,7 +57,7 @@ public class Board : MonoBehaviour
     public void GameOver()
     {
         tilemap.ClearAllTiles();
-
+        animationManager.GameOverAnimation();
         // Do anything else you want on game over here..
     }
 
