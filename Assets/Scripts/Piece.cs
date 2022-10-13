@@ -12,8 +12,6 @@ public class Piece : MonoBehaviour
     public float moveDelay = 0.1f;
     public float lockDelay = 0.5f;
 
-    public float playtime {get; private set;}
-
     private float stepTime;
     private float moveTime;
     private float lockTime;
@@ -40,10 +38,6 @@ public class Piece : MonoBehaviour
 
     private void Update()
     {
-        difficultylevel();
-
-        playtime+=Time.deltaTime;
-
         board.Clear(this);
 
         // We use a timer to allow the player to make adjustments to the piece
@@ -229,11 +223,4 @@ public class Piece : MonoBehaviour
         }
     }
 
-    private void difficultylevel()
-    {
-        if(stepDelay > 0.325)
-        {
-            stepDelay-=playtime / 1500000;
-        }
-    }
 }
