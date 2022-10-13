@@ -52,6 +52,8 @@ public class Board : MonoBehaviour
 
     public void GameOver()
     {
+        animationManager.GameOverAnimation();
+
         tilemap.ClearAllTiles();
 
         // Do anything else you want on game over here..

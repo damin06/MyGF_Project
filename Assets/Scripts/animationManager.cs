@@ -16,22 +16,22 @@ public class animationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int a;
+        // int a;
 
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("CurrentStateName") &&
-            animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
-            {
-                a= Random.Range(1,3);
-                switch(a)
-                {
-                    case 1:
-                        animator.SetTrigger("idle1");
-                        break;
-                    case 2 :
-                        animator.SetTrigger("idle2");
-                        break;
-                }
-            }
+        // if(animator.GetCurrentAnimatorStateInfo(0).IsName("CurrentStateName") &&
+        //     animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+        //     {
+        //         a= Random.Range(1,3);
+        //         switch(a)
+        //         {
+        //             case 1:
+        //                 animator.SetTrigger("idle1");
+        //                 break;
+        //             case 2 :
+        //                 animator.SetTrigger("idle2");
+        //                 break;
+        //         }
+        //     }
     }
 
     private void AnimationController()
@@ -81,6 +81,11 @@ public class animationManager : MonoBehaviour
                 animator.SetTrigger("attack4");
                 break;
         }
+    }
+
+    public void GameOverAnimation()
+    {
+        animator.SetTrigger("GameOver");
     }
 
 }
