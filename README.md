@@ -1,3 +1,4 @@
 # tetris_pretty-girl
 tetris live 2D
-미소녀와 함께 테트리스
+라이브 2D 미소녀 테트리스 게임
+개발중
